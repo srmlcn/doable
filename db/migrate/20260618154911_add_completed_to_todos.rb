@@ -1,5 +1,5 @@
 class AddCompletedToTodos < ActiveRecord::Migration[8.1]
   def change
-    add_column :todos, :completed, :boolean, default: false
+    add_column :todos, :completed, :boolean, default: false, null: false
   end
 end
