@@ -21,6 +21,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
   def project_params
     params.expect(project: [ :name ])
   end
