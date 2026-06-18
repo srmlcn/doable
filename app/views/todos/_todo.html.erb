@@ -19,4 +19,9 @@
     <%= todo.priority %>
   </p>
 
+  <p>
+    <strong>Project:</strong>
+    <%= link_to todo.project.name, project_path(todo.project) %>
+  </p>
+
 </div>
