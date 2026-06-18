@@ -3,7 +3,7 @@
 <ul>
   <% @project.todos.each do |todo| %>
     <li>
-      <%= todo.name %>
+      <%= link_to todo.name, todo_path(todo) %>
       <% if todo.completed %>✅<% end %>
     </li>
   <% end %>
