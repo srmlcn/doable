@@ -30,6 +30,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update(project_params)
+      flash[:notice] = "Project updated successfully!"
       redirect_to project_path(@project)
     else
       render :edit, status: :unprocessable_entity
